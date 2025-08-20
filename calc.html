@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>계산기</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: inline-block;
+      width: 140px;
+    }
+
+    input {
+      padding: 5px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="input-group">
+      <label for="amount">금액:</label>
+      <input type="number" id="amount" value="3000000">
+    </div>
+    <div class="input-group">
+      <label for="multiplier">배율:</label>
+      <input type="number" id="multiplier" value="10" min="1" max="50">
+    </div>
+    <div class="input-group">
+      <label for="entries">하루진입횟수:</label>
+      <input type="number" id="entries" value="10" min="1" max="100">
+    </div>
+    <div class="input-group">
+      <label for="members">회원수:</label>
+      <input type="number" id="members" value="10" min="1" max="1000">
+    </div>
+    <div class="input-group">
+      <label for="fee">수수료 (%):</label>
+      <input type="number" id="fee" value="0.05" min="0.00" max="0.99" step="0.01">
+    </div>
+    <div class="input-group">
+      <label for="referral-fee">레퍼럴 수수료 (%):</label>
+      <input type="number" id="referral-fee" value="75" min="0" max="100s">
+    </div>
+    <div class="input-group" id="result" style="text-align: center;">
+    </div>
+    <div class="buttons">
+      <button onclick="calculate()">계산</button>
+      <button onclick="resetFields()">초기화</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      const amount = parseFloat(document.getElementById('amount').value) || 0;
+      const multiplier = parseFloat(document.getElementById('multiplier').value) || 0;
+      const entries = parseFloat(document.getElementById('entries').value) || 0;
+      const members = parseFloat(document.getElementById('members').value) || 0;
+      const fee = parseFloat(document.getElementById('fee').value) || 0;
+      const referralFee = parseFloat(document.getElementById('referral-fee').value) || 0;
+
+      const profit = amount * multiplier * ((fee * 2) / 100) * ((referralFee) / 100);
+      // const totalProfit = (amount * multiplier * entries * members) * (1 - (fee / 100)) * (1 - (referralFee / 100));
+
+      document.getElementById('result').innerText = `
+        1회 수수료 : ${(profit * members).toLocaleString()}
+        하루 수수료 : ${(profit * members * entries).toLocaleString()}
+      `;
+    }
+
+    function resetFields() {
+      document.getElementById('amount').value = '3000000';
+      document.getElementById('multiplier').value = '10';
+      document.getElementById('entries').value = '10';
+      document.getElementById('members').value = '10';
+      document.getElementById('fee').value = '0.05';
+      document.getElementById('referral-fee').value = '75';
+      document.getElementById('result').innerText = '';
+    }
+  </script>
+
+</body>
+
+</html>
