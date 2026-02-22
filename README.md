@@ -1,3 +1,9 @@
+<style>
+header h1 {
+  display: none !important;
+}
+</style>
+
 # Welcome
 
 [국민내일배움카드 훈련과정 통합검색 - 전체](https://m.work24.go.kr/hr/a/a/1100/trnnCrsInf0.do?dtlContextPath=&redirectUrl=%2Fa%2Fa%2F1100%2FtrnnCrsInf0Post.do&topArea=&dtlSmtmConcCtrlId=&dtlExnwMenuConcSecd=&programMenuIdentification=EBG020000510010&menuPurpSecd=EBM01&dtlPwdCfrmYn=&serverToday=20260222&currentMenuId=EBG020000510010&dtlForwardPolyUrl=&dtlMenuId=&dtlMenuPurpSecd=&area=&crseTracseSe=&ncs=&gvrnInstt=&selectNCSKeyword=&srchType=&requestURI=%2Fhr%2Fa%2Fa%2F1100%2FtrnnCrsInf0Post.do&action=trnnCrsInf0Post.do){: target="_blank"}
