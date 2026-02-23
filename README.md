@@ -12,4 +12,4 @@ header h1 {
 
 [기존주택전세임대 - 유튜브 설명](https://www.youtube.com/watch?v=Lw9_ewWjdtg){:target="_blank"}
 
-[디딤돌 운전면허지원센터](https://www.koroad.or.kr/main/content/view/MN03040401.do)
+[디딤돌 운전면허지원센터](https://www.koroad.or.kr/main/content/view/MN03040401.do){:target="_blank"}
