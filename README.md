@@ -15,3 +15,5 @@ header h1 {
 [디딤돌 운전면허지원센터](https://www.koroad.or.kr/main/content/view/MN03040401.do){:target="_blank"}
 
 [배움나루](https://learning.dangjin.go.kr/index.do){:target="_blank"}
+
+[평생교육이용권 - 충청남도](https://www.lllcard.kr/reg/chungnam/main/mainView.do){:target="_blank"}
